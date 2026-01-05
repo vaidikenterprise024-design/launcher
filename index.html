@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root { --primary:#2563eb; --bg:#f1f5f9; }
+    body { margin:0; font-family: sans-serif; background:var(--bg); display:flex; flex-direction:column; align-items:center; }
+    .header { width:100%; background:var(--primary); color:#fff; padding:20px 0; text-align:center; font-weight:bold; }
+    .container { width:95%; max-width:450px; padding:20px; box-sizing:border-box; }
+    .card { background:#fff; padding:30px; border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.05); text-align:center; }
+    input { width:100%; padding:18px; font-size:18px; border-radius:12px; border:2px solid #ddd; margin-bottom:15px; text-align:center; }
+    .btn { width:100%; padding:18px; background:var(--primary); color:#fff; border:none; border-radius:12px; font-weight:bold; cursor:pointer; }
+    iframe { display:none; } /* Hidden frame to talk to Google Script */
+  </style>
+</head>
+<body>
+  <div class="header">GITHUB SKU SEARCH</div>
+  <div class="container">
+    <div class="card">
+      <input id="barcode" type="text" placeholder="Enter Barcode">
+      <button class="btn" onclick="openScript()">OPEN SEARCH TOOL</button>
+      <p style="font-size:12px; color:gray; margin-top:15px;">Note: This links to your deployed Google Web App.</p>
+    </div>
+  </div>
+
+  <script>
+    function openScript() {
+      // Replace this URL with your "Deployed Web App URL" from Google Apps Script
+      const webAppUrl = "YOUR_GOOGLE_WEB_APP_URL_HERE";
+      window.location.href = webAppUrl;
+    }
+  </script>
+</body>
+</html>
